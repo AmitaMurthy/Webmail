@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </h:head>
+    <h:body style="background-image:url(background.jpg); background-size: 100%; color:white;">
+        <h:form>
+            <div style="margin-top: 120px;"></div>
+            <center>
+                <h2>Compose Email</h2>
+            <div class="form-group">
+            <label style="color:white;">To:</label>
+            <h:inputText id="To" value="#{login.user.composeRecepient}" class="form-control" style="width: 200px;"></h:inputText>
+           <br></br>
+            
+            <label style="color:white;">Title:</label>
+            <h:inputText id ="Title" value="#{login.user.composeTitle}" class="form-control" style="width: 200px;"></h:inputText><br></br>
+            
+            
+            <label style="color:white;">Content:</label>
+            <h:inputTextarea id ="content" value ="#{login.user.composeContent}" class="form-control" style="width: 200px;" ></h:inputTextarea><br></br>
+            </div>
+                
+                <h:selectBooleanCheckbox value="#{login.user.notifyCompose}" id="notify">Notify me when the user reads email   </h:selectBooleanCheckbox>
+            
+            <br></br>
+            <br></br>
+            <br></br>
+            <h:commandButton id ="send" value ="Send" action="#{login.user.composeEmail(login.id)}" class="btn-lg" style="width: 200px; color:black;"></h:commandButton>   
+
+            </center>
+        </h:form>
+    </h:body>
+</html>
+

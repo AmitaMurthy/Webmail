@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+     <h:head>
+        <title>Facelet Title</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+    </h:head>
+    <h:body style="background-image:url(background.jpg); background-size: 100%; color:white;">
+        <div style="margin-top: 80px;"></div>
+        <h:form>
+          
+            <center>
+            <h1>Trash Email</h1>
+            <h3>From:#{login.user.trashEmail.sender}</h3>
+            <h3>Title:#{login.user.trashEmail.title}</h3>
+            <h3>Content:#{login.user.trashEmail.content}</h3>
+            
+            <p></p>
+            <p></p>
+            <p></p>
+            
+           <h:commandButton id="return" value="Return" immediate="true"
+                                     action="trash.xhtml" class="btn-lg" style="width: 200px;"/>
+            
+                
+             </center>      
+          
+            
+            
+            
+        </h:form>
+    </h:body>
+</html>
+

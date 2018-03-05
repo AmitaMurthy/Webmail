@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Login</title>
+        <meta http-equiv="pragma" content="no-cache" />
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="refresh" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </h:head>
+    <h:body style="background-image:url(background.jpg); background-size: 100%">
+        <center>
+        <h:form>
+            <div style="margin-top: 200px;"></div>
+            <div class="form-group">
+                <label style="color:white;">Username:</label>
+                
+                        <h:inputText id="id" required="true" requiredMessage="User name cannot be empty !!!!" title="Please enter user name"
+                                     value="#{login.id}" class="form-control" style="width: 200px;">
+                          
+                            
+                         </h:inputText>
+                            
+               
+                </div>
+                
+          
+            <p>
+            <div class="form-group">
+            <label style="color:white;">Password:</label>
+            <h:inputText id="password" required="true" requiredMessage="Password cannot be empty !!!!" title="Please enter password" value="#{login.password}" class="form-control" style="width: 200px;">
+                
+            </h:inputText>
+            </div>
+        </p>
+            <h:commandButton id="submit" value="Submit" action="#{login.login()}" class="btn-lg" style="width: 200px;"></h:commandButton>
+            <p>
+                
+            </p>
+        </h:form>
+            </center>
+    </h:body>
+</html>

@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </h:head>
+   <h:body style="background-image:url(background.jpg); background-size: 100%; color:white;">
+       <h:form>
+       
+         <div style="margin-top: 200px;"></div>
+         <center>
+                    
+                    
+                
+        <h3>To: #{login.user.readSelectedEmail().senderFirstname} #{login.user.readSelectedEmail().senderLastname}</h3>
+        <p></p>
+        <h3>Title: #{login.user.readSelectedEmail().title}</h3>
+        <p></p>
+        <h3>Content: #{login.user.readSelectedEmail().content}</h3>
+        
+            <br></br>
+            <br></br>
+            <br></br>
+        
+         <h:commandButton id="inbox" value="Return" action="welcome.xhtml" class="btn-lg" style="width: 200px;"/>
+         
+         </center>
+         </h:form>
+    </h:body>
+</html>
+

@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </h:head>
+    <h:body style="background-image:url(background.jpg); background-size: 100%;">
+        <center>
+        <h:form>
+            <div style="margin-top: 160px;"></div>
+            <h3 style="color:white;">Create a new online access account!</h3>
+             <br></br>
+                
+             <div class="form-group">       
+                 <label style="color:white;">Please enter your new online ID:</label>
+                 <br></br>
+                <h:inputText id="id" required ="true" 
+                             requiredMessage="The ID field cannot be empty"
+                        title="Please enter your ID"
+                        value="#{registration.id}"
+                        validatorMessage="The length of your selected 
+                        ID must be between 3 and 20." class="form-control" style="width: 200px;">
+                    <f:validateLength maximum="20" minimum="3" />
+                </h:inputText>
+            
+                <br></br>
+             <label style="color:white;">Please enter your selected password:</label>
+            <br></br>
+                <h:inputText id="password" required ="true" 
+                          requiredMessage="The password field cannot be empty"
+                        title="Please enter your password"
+                        value="#{registration.password}"
+                        validatorMessage="The length of your 
+                        password must be between 3 and 20." class="form-control" style="width: 200px;">
+                    <f:validateLength maximum="20" minimum="3" />
+                </h:inputText>
+            
+             <br></br>
+            <label style="color:white;">Please enter your First name:</label>
+            <br></br>
+                <h:inputText id="firstname" required ="true" 
+                             requiredMessage="The ID field cannot be empty"
+                        title="Please enter your ID"
+                        value="#{registration.firstname}"
+                        validatorMessage="The length of your selected 
+                        ID must be between 3 and 20." class="form-control" style="width: 200px;">
+                    <f:validateLength maximum="20" minimum="3" />
+                </h:inputText>
+            
+             <br></br>
+            <label style="color:white;">Please enter your Last name:</label>
+               <br></br>
+                <h:inputText id="lastname" required ="true" 
+                             requiredMessage="The ID field cannot be empty"
+                        title="Please enter your ID"
+                        value="#{registration.lastname}"
+                        validatorMessage="The length of your selected 
+                        ID must be between 3 and 20." class="form-control" style="width: 200px;">
+                    <f:validateLength maximum="20" minimum="3" />
+                </h:inputText>
+            <br></br>
+           
+                 
+             </div>
+            
+            <p>
+                <h:commandButton id="submit" value="Submit" action="ConfirmReg" class="btn-lg" style="width: 200px;"/>
+            </p>
+            
+           
+
+        </h:form>
+             </center>
+    </h:body>
+</html>
+

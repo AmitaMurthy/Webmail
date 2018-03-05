@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+    </h:head>
+    <h:body style="background-image:url(background.jpg); background-size: 100%; color:white;">
+        <div style="margin-top: 80px;"></div>
+        <h:form>
+           
+            <div clas="container">
+            <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-4">
+            <h1>Current Email</h1>
+            <p>From:#{login.user.current.sender}</p>
+            <p>Title:#{login.user.current.title}</p>
+            <p>Content:#{login.user.current.content}</p>
+            </div>  
+            
+            
+            <div class="col-sm-4">
+            <h1>Reply</h1>
+            <p></p>
+            <div class="form-group">
+            <label style="color:white;">Enter your reply</label>
+            <h:inputTextarea value="#{login.user.replyContent}" class="form-control" style="width: 200px;"></h:inputTextarea>
+            </div>
+            <p></p>
+            <h:selectBooleanCheckbox value="#{login.user.notify}" id="notify">Notify me when the user reads email   </h:selectBooleanCheckbox>
+            <p></p>
+            <h:commandButton value="Submit" action="#{login.user.reply(login.user.current.email_id, login.user.current.reply_id, login.user.current.recipient, login.user.current.sender, login.user.current.title)}" class="btn-lg" style="width: 200px; color:black;"></h:commandButton>
+            <p></p>
+            <p></p>
+            <p></p>
+            <h:commandButton id="inbox" value="Inbox" action="#{login.user.getInMails()}" class="btn-lg" style="width: 200px; color:black;"/>
+            
+            </div>
+                
+            <div class="col-sm-3">
+            <h1>Forward</h1>
+            <p></p>
+            <div class="form-group">
+            <label style="color:white;">Enter your recipient</label>
+         
+            <h:inputText value="#{login.user.forwardTo}" class="form-control" style="width: 200px;"></h:inputText>
+            </div>
+            <p></p>
+            <h:selectBooleanCheckbox value="#{login.user.notify}" id="notifyfw">Notify me when the user reads email   </h:selectBooleanCheckbox>
+            <p></p>
+            <h:commandButton value="Submit" action="#{login.user.forward(login.user.current.email_id, login.user.current.reply_id, login.user.current.recipient, login.user.current.title, login.user.current.content)}" class="btn-lg" style="width: 200px; color:black;"></h:commandButton>
+            </div>
+                
+                </div>
+                </div>
+            <p></p>
+            
+       
+            
+        </h:form>
+    </h:body>
+</html>
+

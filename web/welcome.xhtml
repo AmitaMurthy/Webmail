@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <head>
+        <title>Welcome</title>
+    </head>
+    <body style="background-image:url(background.jpg); background-size: 100%">
+        <h:form> 
+            <center>
+            <div style="margin-top: 80px;"></div>
+            <div><p  style="color:white;">Welcome, #{login.firstname}</p></div>
+            <div style="margin-top: 40px;"></div>
+            <h:commandButton id="inbox" value="Inbox" action="#{login.user.getInMails()}" class="btn-lg" style="width: 200px;"/>
+            <div style="margin-top: 40px;"></div>
+            <h:commandButton id="sentItems" value="Sent Items" action="sentItems" class="btn-lg" style="width: 200px;"/>
+            <div style="margin-top: 40px;"></div>
+            <h:commandButton id="compose" value="Compose Email" action="composeEmail" class="btn-lg" style="width: 200px;"/>   
+            <div style="margin-top: 40px;"></div>
+            <h:commandButton id="notification" value="Notification" action="notification" class="btn-lg" style="width: 200px;"/>
+             <div style="margin-top: 40px;"></div>      
+             <h:commandButton id="trash" value="Trash" action="trash" class="btn-lg" style="width: 200px;"/>
+             <div style="margin-top: 40px;"></div>  
+            <h:commandButton id="SignOut" value="Sign Out" action="#{login.signOut()}" class="btn-lg" style="width: 200px;"/>    
+            
+            </center>
+        </h:form>
+    </body>
+</html>
